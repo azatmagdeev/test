@@ -38,7 +38,7 @@ textarea.addEventListener('keydown', e => {
 });
 
 window.addEventListener('click', (e) => {
-    e.target !== textarea ? textarea.style.display = 'none': null
+    e.target !== textarea ? textarea.style.display = 'none' : null
 });
 
 function updateData(index, propIndex, value) {
@@ -93,9 +93,15 @@ function buildTableData(prop, tr) {
     td.style.position = 'relative';
     td.style.width = '33%';
     tr.appendChild(td);
-    td.addEventListener('dblclick', () => {
+    td.addEventListener('dblclick', (e) => {
+        console.log(e);
         showTextarea(td, prop)
     });
+    td.addEventListener('touchstart',e=>{
+        console.log(e);
+        showTextarea(td, prop)
+    })
+
     return td;
 }
 
