@@ -94,14 +94,13 @@ function buildTableData(prop, tr) {
     td.style.width = '33%';
     tr.appendChild(td);
     td.addEventListener('dblclick', (e) => {
-        console.log(e);
         showTextarea(td, prop)
     });
-    td.addEventListener('touchstart',e=>{
-        console.log(e);
-        showTextarea(td, prop)
-    })
-
+    td.addEventListener('touchstart', e => {
+        const timer = setTimeout(() => showTextarea(td, prop), 800);
+        td.addEventListener('touchend', () => clearTimeout(timer));
+        td.addEventListener('touchmove', () => clearTimeout(timer));
+    });
     return td;
 }
 
