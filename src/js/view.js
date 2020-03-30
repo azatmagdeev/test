@@ -83,6 +83,7 @@ export class View {
         });
 
         delButton.addEventListener('click', () => {
+            this.form.style.display = 'none';
             const areYouSure = confirm('Удалить объект. Вы уверены?');
             if(areYouSure) {
                 this.manager.deleteItem(tRow.rowIndex);

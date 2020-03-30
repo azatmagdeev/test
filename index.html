@@ -5,47 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-        header  {
-            position: fixed;
-            background-color: lightblue;
-            width: 100%;
-            height: 10%;
-        }
-
-        header h1{
-            display: inline;
-        }
-
-        header button{
-            float: right;
-            margin: 10px 10px ;
-        }
-        form#form {
-            padding: 20px;
-            border:1px solid black ;
-            background-color: lightgreen;
-            position: absolute;
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: none
-        }
-
-        table {
-            border-collapse: collapse;
-            border: 1px solid black;
-
-        }
-
-        td, th {
-            border: 1px solid black;
-            padding: 5px 8px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="src/style.css">
     <title>Мед.Учреждения</title>
 </head>
 <body>
@@ -53,17 +13,19 @@
     <h1>База медучреждений</h1>
     <button id="add">Добавить организацию</button>
     <form id="form">
-        <label>
-            <input type="text" placeholder="Наименование" name="full_name" >
-        </label>
-         <label>
-            <input type="text" placeholder="Адрес" name="address">
-        </label>
-         <label>
-            <input type="tel" placeholder="Телефон" name="phone">
-        </label>
-        <button id="enter">Сохранить</button>
-        <button id="cancel">Отмена</button>
+        <div class="form">
+            <label>
+                <textarea type="text" placeholder="Наименование" name="full_name" ></textarea>
+            </label>
+            <label>
+                <textarea type="text" placeholder="Адрес" name="address"></textarea>
+            </label>
+            <label>
+                <textarea type="text" placeholder="Телефон" name="phone"></textarea>
+            </label>
+            <input type="submit" id="cancel" value="Отмена">
+            <input type="submit" id="enter" value="Сохранить">
+        </div>
     </form>
 </header>
 <main id="root">
