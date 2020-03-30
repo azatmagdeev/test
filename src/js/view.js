@@ -68,8 +68,8 @@ export class View {
         tRow.innerHTML = `<td>${item.full_name}</td>
                               <td>${item.address}</td>
                               <td>${item.phone}</td>
-                              <td><button id="updButton"><img src="../src/img/update.png" alt="Изменить" height="20px"></button></td>
-                              <td><button id="delButton"><img src="../src/img/delete.png" alt="Удалить" height="20px"></button></td>`;
+                              <td><button id="updButton"><img src="./src/img/update.png" alt="Изменить" height="20px"></button></td>
+                              <td><button id="delButton"><img src="./src/img/delete.png" alt="Удалить" height="20px"></button></td>`;
         callback();
 
         const updButton = tRow.querySelector('#updButton');
