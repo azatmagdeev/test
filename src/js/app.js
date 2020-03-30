@@ -6,7 +6,7 @@ const root = document.querySelector('#root');
 const addButton = document.querySelector('#add');
 
 
-const manager = new Manager('lpu.json');
+const manager = new Manager('src/lpu.json');
 const view = new View(addButton, form, root, manager);
 
 
